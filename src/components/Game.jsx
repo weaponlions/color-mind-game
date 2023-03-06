@@ -7,11 +7,12 @@ let userAction = []
 const limit = 4
 let perform = 0
 let min = 0  
+const val = parseInt(localStorage.getItem('maxScore')) || 0
 
 export const Game = () => {
     const [score, setScore] = useState(0)
     const [count, setCount] = useState('') 
-    const [max, setMax] = useState(parseInt(localStorage.getItem('maxScore')))
+    const [max, setMax] = useState(val)
     const audio = new Audio(horn); 
     const winAudio = new Audio(wining); 
 
